@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+int g=0;// global var
+int fun(int n){
+    
+    if (n>0){
+        g++;
+        return fun(n-1)+g;
+    } return 0;
+}
+int main()
+{
+    int x=5;
+   cout<< fun(x);
+
+    return 0;
+}
