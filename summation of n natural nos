@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int fun(int n){
+    if (n==0) return 0;// not 1, do not right if(n=0) this is assignment
+    else
+    return (fun(n-1)+n);
+}
+int main()
+{
+  cout<<fun(5);
+    return 0;
+}
