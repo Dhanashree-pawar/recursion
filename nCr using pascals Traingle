@@ -1,0 +1,20 @@
+// nCr using recursion using  pascals traingle
+//pascals triangle:                   1
+//                                1      1
+//                            1      2       1
+//                       1       3      3        1
+//                  1        4      6       4        1
+//                4CO      4C1      4C2    4C3       4C4
+#include <iostream>
+using namespace std;
+int c(int n, int r){
+    if(n==r || r==0){
+        return 1;
+    }
+    return c(n-1, r-1)+c(n-1,r);
+}
+int main()
+{
+    cout<<c(4,2);
+    return 0;
+}
