@@ -1,0 +1,25 @@
+//excessive recursion- when fucn calls itself for the same values
+// fibonacci series using recursion
+//memoization - by storign the result of fucn in an static/global array we can prevent repetitive fucn calls
+// now the time comp is o(n)
+#include <iostream>
+
+using namespace std;
+int f[10];
+int fib(int n){
+    
+    if (n<=1) {
+        f[n]=n;
+        return n;}
+    if (f[n-2]==-1) f[n-2]=fib(n-2);
+    if (f[n-1]==-1) f[n-1]=fib(n-1);
+    return fib(n-2)+fib(n-1);
+    
+}
+int main()
+{
+    for(int i=0;i<10;i++) f[i]=-1;
+    cout<<fib(5);
+
+    return 0;
+}
